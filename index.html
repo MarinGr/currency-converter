@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Currency Converter</h1>
+      <div class="rate-info-message"></div>
+      <div class="converter-container">
+        <section class="convert-from">
+          <p class="description">You have</p>
+          <div class="input-group">
+            <input
+              type="text"
+              id="from"
+              class="input-amount"
+              maxlength="10"
+              autofocus
+            />
+            <select
+              name="country"
+              id="country"
+              class="currency-selector from-selector"
+            ></select>
+          </div>
+        </section>
+        <i class="fa-solid fa-arrow-right-arrow-left exchange-icon"></i>
+        <section class="convert-to">
+          <p class="description">You get</p>
+          <div class="input-group">
+            <input type="text" id="to" class="input-amount" maxlength="10" />
+            <select
+              name="country"
+              id="country"
+              class="currency-selector to-selector"
+            ></select>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+:root {
+  --bg-color: linear-gradient(
+    109.6deg,
+    rgba(96, 221, 142, 1) 11.2%,
+    rgba(24, 138, 141, 1) 91.1%
+  );
+  --converter-bg-color: #fff;
+  --text-color: #333;
+  --primary-color: rgba(24, 138, 141, 1);
+  --message-bg-color: rgb(167, 224, 205);
+  --error-message-bg-color: rgb(245, 182, 196);
+  --error-text-color: rgb(202, 9, 51);
+  --border-color: #ddd;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  background-image: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--converter-bg-color);
+  height: auto;
+  width: 540px;
+  padding: 36px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease-out;
+}
+
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.rate-info-message,
+.error-message {
+  width: 100%;
+  background-color: var(--message-bg-color);
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 5px;
+  display: none;
+}
+
+.error-message {
+  background-color: var(--error-message-bg-color);
+  color: var(--error-text-color);
+}
+
+.converter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.description {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+}
+
+.input-amount {
+  width: 200px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.input-amount:focus {
+  border-color: var(--primary-color);
+}
+
+.currency-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 4px;
+  top: 9px;
+}
+
+.exchange-icon {
+  margin-top: 24px;
+  font-size: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 360px;
+  }
+
+  .converter-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .rate-info-message,
+  .input-amount {
+    width: 300px;
+  }
+
+  .exchange-icon {
+    margin-top: 10px;
+    transform: rotate(90deg);
+  }
+}
