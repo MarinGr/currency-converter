@@ -9,3 +9,5 @@ Exchange rates data is retrieved from https://exchangerate.host/#/
 # Live demo
 
 You can load live demo project by clicking this link https://maringr.github.io/Currency-converter/
+
+![Currency Converter](/images/currency-converter-screen.png)
